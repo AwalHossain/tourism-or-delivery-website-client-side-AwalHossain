@@ -4,23 +4,32 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Service from './components/Service/Service';
+import AuthProvider from './ContexApi/AuthProvider';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Header></Header>
-      <Switch>
+    <AuthProvider>
+       <BrowserRouter>
+       <Header></Header>
+       <Switch>
         <Route exact path="/">
-        <Home></Home>
+        {/* <Home></Home> */}
+        <Service></Service>
         </Route>
         <Route path="/home">
         <Home></Home>
         </Route>
+        <PrivateRoute path="/service">
+        <Service></Service>
+        </PrivateRoute>
         <Route path="/login">
         <Login></Login>
         </Route>
-      </Switch>
-    </BrowserRouter>
+       </Switch>
+     </BrowserRouter>
+    </AuthProvider>
   );
 }
 
