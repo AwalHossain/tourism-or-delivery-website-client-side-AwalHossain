@@ -1,12 +1,10 @@
 
-import Login from '../Login/Login';
-import Service from '../Service/Service';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     return (
         <div>
-            <Login></Login>
-            <Service></Service>
+            <Banner></Banner>
         </div>
     );
 };

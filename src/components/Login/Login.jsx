@@ -1,13 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import UseFirebase from '../../Hooks/UseFirebase';
+import {  useLocation, useHistory } from 'react-router-dom';
+import UseAuth from '../../Hooks/UseAuth';
 import './Login.css'
 const Login = () => {
-    const {signInWithGoogle} = UseFirebase()
+    //Redirect methed
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/home'
+    const history = useHistory();
+    //UseAuth contex api
+    const {signInWithGoogle} = UseAuth()
+    //google sign in
+    const handleSignInWithGoogle=()=>{
+        signInWithGoogle()
+        .then((result)=>{
+            const user = result.user;
+            history.push(redirect_uri)
+            console.log(user);
+        })
+        .catch(error =>{
+            alert(error.message)
+        })
+        // setLoading(false)
+    }
     return (
         <div className="section my-5">
             <h2>Login With</h2>
-            <div onClick={signInWithGoogle} className="d-flex cursor-pointer my-3 credent  align-center">
+            <div onClick={handleSignInWithGoogle} className="d-flex cursor-pointer my-3 credent  align-center">
                 <div className="g-logo d-flex">
                     <img className="g-img" src="https://media.wired.com/photos/5926ffe47034dc5f91bed4e8/master/pass/google-logo.jpg" alt="" />
                     </div>
