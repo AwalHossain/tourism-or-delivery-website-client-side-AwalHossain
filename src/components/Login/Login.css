@@ -1,0 +1,30 @@
+.section {
+  width: 800px;
+  height: 300px;
+  background-color: azure;
+  margin: 0 auto;
+}
+
+.g-logo {
+  width: 31px;
+  height: 31.74px;
+  justify-content: end;
+}
+.g-img {
+  object-fit: contain;
+  width: 100%;
+}
+.credent {
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid lightgray;
+  border-radius: 45px;
+}
+.credent p {
+  margin-bottom: 0;
+}
+.login {
+  display: flex;
+  margin-left: 75px;
+}
