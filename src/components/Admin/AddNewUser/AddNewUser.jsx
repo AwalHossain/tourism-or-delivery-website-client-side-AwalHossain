@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 const AddNewUser = () => {
-    const { register, handleSubmit,
+    const { register, handleSubmit,reset,
         formState: { errors } } = useForm();
     const [data, setData ] = useState([])
 
@@ -10,9 +10,19 @@ const AddNewUser = () => {
    
 
     const onSubmit = data =>{
-        data.status='pending'
-        console.log(data);
-
+        // data.status='pending'
+        fetch("http://localhost:5000/addUser", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
+          })
+            .then((res) => res.json())
+            .then((result) => {
+                alert("Data successfully added")
+                console.log(result)
+                reset()
+            } );
+          console.log(data);
     } 
     return (
         <div className="bg-primary">
@@ -22,11 +32,11 @@ const AddNewUser = () => {
       <input className="my-2" placeholder="Service Name"  {...register("name")} />
 
       {/* include validation with required or other standard HTML validation rules */}
-      <input className="my-2" placeholder="Service Description"   {...register("email", { required: true })} />
+      <textarea className="my-2" placeholder="Service Description"   {...register("desc", { required: true })} />
       {/* errors will return when field validation fails  */}
       {errors.email && <p>This field is required</p>}
         {/* register your input into the hook by invoking the "register" function */}
-      <input className="my-2" placeholder="service price" type="number" {...register("title")} />
+      <input className="my-2" placeholder="service price" type="number" {...register("price")} />
       <input className="my-2" placeholder="You image url"  {...register("image", { required: true })} />
       {errors.image && <p>This field is required</p>}
       <input type="submit" />

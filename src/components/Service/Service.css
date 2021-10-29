@@ -1,0 +1,12 @@
+.head-img {
+  object-fit: cover;
+  height: 100% !important;
+  width: 100% !important;
+}
+.img-box {
+  width: 385px;
+  height: 385px;
+}
+.box {
+  width: 385px;
+}

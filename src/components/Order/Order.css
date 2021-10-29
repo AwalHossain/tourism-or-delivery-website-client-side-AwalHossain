@@ -124,3 +124,10 @@ button {
   padding: 10px 20px;
   border-radius: 4px;
 }
+.card {
+  width: 100% !important;
+}
+.card-img {
+  width: 385px;
+  height: 385px;
+}

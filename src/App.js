@@ -7,8 +7,9 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Service from './components/Service/Service';
+import Services from './components/Services/Services';
 import AuthProvider from './ContexApi/AuthProvider';
+import Order from './components/Order/Order'
 
 function App() {
   return (
@@ -22,11 +23,14 @@ function App() {
         <Route path="/home">
         <Home></Home>
         </Route>
-        <PrivateRoute path="/service">
-        <Service></Service>
+        <PrivateRoute path="/services">
+        <Services></Services>
         </PrivateRoute>
         <PrivateRoute path="/adduser">
           <AddNewUser></AddNewUser>
+        </PrivateRoute>
+        <PrivateRoute path="/order/:serviceId">
+          <Order></Order>
         </PrivateRoute>
         <PrivateRoute path="/manageuser">
           <ManageUser></ManageUser>
