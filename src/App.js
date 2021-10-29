@@ -1,6 +1,8 @@
 
 import { BrowserRouter,Route, Switch } from 'react-router-dom';
 import './App.css';
+import AddNewUser from './components/Admin/AddNewUser/AddNewUser';
+import ManageUser from './components/Admin/ManageUsers/ManageUser';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -22,6 +24,12 @@ function App() {
         </Route>
         <PrivateRoute path="/service">
         <Service></Service>
+        </PrivateRoute>
+        <PrivateRoute path="/adduser">
+          <AddNewUser></AddNewUser>
+        </PrivateRoute>
+        <PrivateRoute path="/manageuser">
+          <ManageUser></ManageUser>
         </PrivateRoute>
         <Route path="/login">
         <Login></Login>
