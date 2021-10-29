@@ -1,0 +1,16 @@
+.carde {
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  width: 330px;
+}
+.img-box {
+  width: 100%;
+  height: auto;
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}

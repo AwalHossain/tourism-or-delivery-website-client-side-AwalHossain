@@ -14,7 +14,7 @@ const Order = () => {
     //Fetching data
     const [services, setServices] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://polar-tor-84735.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])   
@@ -31,7 +31,7 @@ const Order = () => {
         data.img = img
         data.desc = desc
         console.log(data);
-        fetch('http://localhost:5000/placeOrder',{
+        fetch('https://polar-tor-84735.herokuapp.com/placeOrder',{
             method:"POST",
             headers:{
                 'content-type':'application/json'

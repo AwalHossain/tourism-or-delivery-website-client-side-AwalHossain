@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const AddNewUser = () => {
+const AddNewService = () => {
     const { register, handleSubmit,reset,
         formState: { errors } } = useForm();
     const [data, setData ] = useState([])
@@ -11,7 +11,7 @@ const AddNewUser = () => {
 
     const onSubmit = data =>{
         // data.status='pending'
-        fetch("http://localhost:5000/addUser", {
+        fetch("https://polar-tor-84735.herokuapp.com/addServices", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -45,4 +45,4 @@ const AddNewUser = () => {
     );
 };
 
-export default AddNewUser;
+export default AddNewService;

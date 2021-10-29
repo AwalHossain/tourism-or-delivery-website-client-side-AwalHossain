@@ -14,8 +14,11 @@ const Header = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ms-auto">
                     <Link className="nav-link" to="/home"> Home </Link>
-                    <Link className="nav-link" to="features">Features</Link>
+                   
                     <Link to="/services" className="nav-link">Services</Link>
+                    {
+                         user?.email &&  <Link className="nav-link" to="/myorder">MyOrder</Link>
+                    }
                     {
                         user?.email? <Link className="nav-link" onClick={logOut} to="/login"> LogOut </Link> :
                         <Link className="nav-link" to="/login">  Login  </Link>
@@ -23,8 +26,8 @@ const Header = () => {
                 </Nav>
                     {
                         user?.email &&   <NavDropdown  className="dark" variant="dark" title="Admin" id="collasible-nav-dropdown">
-                        <Link className="nav-link" to="adduser">Add new user</Link>
-                        <Link className="nav-link" to="/manageuser" >Manage user</Link>
+                        <Link className="nav-link" to="addService">Add New Service</Link>
+                        <Link className="nav-link" to="/manageOrder" >Manage Order</Link>
                         </NavDropdown>
                     }
                 </Navbar.Collapse>

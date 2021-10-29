@@ -1,8 +1,6 @@
 
 import { BrowserRouter,Route, Switch } from 'react-router-dom';
 import './App.css';
-import AddNewUser from './components/Admin/AddNewUser/AddNewUser';
-import ManageUser from './components/Admin/ManageUsers/ManageUser';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -10,6 +8,10 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Services from './components/Services/Services';
 import AuthProvider from './ContexApi/AuthProvider';
 import Order from './components/Order/Order'
+import MyOrder from './components/MyOrder/MyOrder';
+
+import AddNewService from './components/Admin/AddNewService/AddNewService';
+import ManageOrder from './components/Admin/ManageOrder/ManageOrder';
 
 function App() {
   return (
@@ -23,17 +25,20 @@ function App() {
         <Route path="/home">
         <Home></Home>
         </Route>
-        <PrivateRoute path="/services">
+        <Route path="/services">
         <Services></Services>
-        </PrivateRoute>
-        <PrivateRoute path="/adduser">
-          <AddNewUser></AddNewUser>
+        </Route>
+        <PrivateRoute path="/addService">
+          <AddNewService></AddNewService>
         </PrivateRoute>
         <PrivateRoute path="/order/:serviceId">
           <Order></Order>
         </PrivateRoute>
-        <PrivateRoute path="/manageuser">
-          <ManageUser></ManageUser>
+        <PrivateRoute path="/manageOrder">
+          <ManageOrder></ManageOrder>
+        </PrivateRoute>
+        <PrivateRoute path="/myorder">
+          <MyOrder></MyOrder>
         </PrivateRoute>
         <Route path="/login">
         <Login></Login>
