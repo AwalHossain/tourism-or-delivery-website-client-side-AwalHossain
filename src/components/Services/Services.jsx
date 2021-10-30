@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
+import { trackPromise } from 'react-promise-tracker';
 import Service from '../Service/Service';
 
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(()=>{
-        fetch('https://polar-tor-84735.herokuapp.com/services')
-        .then(res => res.json())
-        .then(data => setServices(data))
+        trackPromise(
+            fetch('https://polar-tor-84735.herokuapp.com/services')
+            .then(res => res.json())
+            .then(data => setServices(data))
+        )
     },[])
+    
     return (
         <div>
             <Row xs={1} md={2} lg={3} className="g-4">
