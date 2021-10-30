@@ -47,7 +47,6 @@ const Order = () => {
     } 
     return (
         <div className=" my-5 container">
-            <h2>Hello ther I am dynamic ${serviceId} </h2>
             <div className="row row-cols-1 row-cols-md-2">
                 <div className="col">
                 <div className="card">

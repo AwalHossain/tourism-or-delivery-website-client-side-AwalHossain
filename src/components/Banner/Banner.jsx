@@ -1,9 +1,16 @@
 import React from 'react';
-
+import './Banner.css'
 const Banner = () => {
     return (
-        <div>
-            <h2 className="my-5 text-center">This is banner</h2>
+        <div  className=" banner-imgbox relative  h-[300px] sm:h-[400px] log:h-[500px] xl:h-[600px] 2xl:h-[700px]">
+            <div>
+                <img className="banner-img object-cover" src="https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg" alt="" />
+            </div>
+            <div className="absolute top-1/2 w-full text-center sm:text-lg">
+                <p>Not sure Where to go?Perfect</p>
+                
+                <button className="text-purple-500 bg-white mx-auto px-10 py-3 shadow-md rounded-full font-bold my-3 border-none hover:shadow-xl transition duration-150">I'm Flexible</button>
+            </div>
         </div>
     );
 };

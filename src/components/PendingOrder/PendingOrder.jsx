@@ -6,6 +6,7 @@ const PendingOrder = (props) => {
     const {name, desc, status, img, _id} = props.order;
     //useState 
     const [control, setControl] = useState(false)
+    console.log(props.order);
     //handle Delete
     const handleDelete =(id)=>{
         const confirm = window.confirm("Do You really want to delete the item?")

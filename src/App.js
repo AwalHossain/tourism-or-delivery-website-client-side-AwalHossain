@@ -12,13 +12,17 @@ import MyOrder from './components/MyOrder/MyOrder';
 
 import AddNewService from './components/Admin/AddNewService/AddNewService';
 import ManageOrder from './components/Admin/ManageOrder/ManageOrder';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <AuthProvider>
+
+      <AuthProvider>
        <BrowserRouter>
+       <div id="content">
        <Header></Header>
-       <Switch>
+        <div id="main-content">
+        <Switch>
         <Route exact path="/">
         <Home></Home>
         </Route>
@@ -44,8 +48,12 @@ function App() {
         <Login></Login>
         </Route>
        </Switch>
+        </div>
+        <Footer></Footer>
+       </div>
      </BrowserRouter>
     </AuthProvider>
+   
   );
 }
 

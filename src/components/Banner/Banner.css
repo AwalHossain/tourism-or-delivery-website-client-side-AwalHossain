@@ -1,0 +1,14 @@
+.banner-img {
+  width: 100% !important;
+  height: 550px;
+  position: relative;
+}
+.banner-imgbox {
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-img {
+    width: 100% !important;
+    height: 400px;
+  }
+}

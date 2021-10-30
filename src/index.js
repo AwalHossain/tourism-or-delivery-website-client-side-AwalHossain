@@ -13,8 +13,9 @@ import Loader from 'react-loader-spinner';
        promiseInProgress &&
        <div
             style={{
-               width: "100%",
-               height: "100",
+              position: "fixed", /* or absolute */
+              top: "50%",
+              left: "50%",
                display: "flex",
                justifyContent: "center",
               alignItems: "center"

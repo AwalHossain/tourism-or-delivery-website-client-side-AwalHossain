@@ -15,14 +15,19 @@ const Services = () => {
     
     return (
         <div>
-            <Row xs={1} md={2} lg={3} className="g-4">
+            <h2 className="my-10">
+                This is our services
+            </h2>
+            <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* <Row xs={1} md={2} lg={3} className="g-4"> */}
                 {
                     services.map(data => <Service
                     key={data._id}
                     service={data}
                     ></Service>)
                 }
-            </Row>
+            {/* </Row> */}
+        </div>
         </div>
     );
 };
