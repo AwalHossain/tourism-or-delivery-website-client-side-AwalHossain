@@ -49,7 +49,7 @@ function App() {
         </Route>
        </Switch>
         </div>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
        </div>
      </BrowserRouter>
     </AuthProvider>

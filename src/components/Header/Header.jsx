@@ -20,7 +20,7 @@ const Header = () => {
                          user?.email &&  <Link className="nav-link" to="/myorder">MyOrder</Link>
                     }
                     {
-                        user?.email? <Link className="nav-link" onClick={logOut} to="/login"> LogOut </Link> :
+                        user?.email? <Link className="nav-link" onClick={logOut} to="/login"> LogOut {user?.displayName} </Link> :
                         <Link className="nav-link" to="/login">  Login  </Link>
                     }
                 </Nav>

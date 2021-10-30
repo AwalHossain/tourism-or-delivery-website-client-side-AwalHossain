@@ -65,13 +65,13 @@ const ManageOrder= () => {
 
     return (
         <div>
-            <h2>I am from manage user</h2>
-               <Table striped bordered hover>
+      
+       <Table striped bordered hover>
         <thead>
           <tr>
             <th>#</th>
             <th>Event Title</th>
-            <th>Event description</th>
+            <th>Username</th>
             <th>Email</th>
             <th>Status</th>
             <th>Status Update</th>
@@ -85,7 +85,7 @@ const ManageOrder= () => {
             <tr>
               <td>{index}</td>
               <td>{pd.name}</td>
-              <td>{pd.desc.slice(0,50)}</td>
+              <td>{pd?.displayName}</td>
               <td>{pd.email}</td>
               <td>
                 <div >
@@ -119,7 +119,8 @@ const ManageOrder= () => {
             </tr>
           </tbody>
         ))}
-      </Table>
+      </Table> 
+      
         </div>
     );
 };

@@ -1,10 +1,11 @@
 import React,{useState, useEffect} from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { useForm } from "react-hook-form";
 import UseAuth from '../../Hooks/UseAuth'
 import './Order.css'
 const Order = () => {
     const {user} = UseAuth();
+    const history = useHistory();
     //useParams
     const {serviceId} = useParams()
     const { register, handleSubmit, watch,
@@ -27,6 +28,7 @@ const Order = () => {
 
     const onSubmit = data =>{
         data.status='pending'
+        data.displayName=user?.displayName
         data.name = name;
         data.img = img
         data.desc = desc
@@ -42,6 +44,7 @@ const Order = () => {
         .then(result =>{
             alert("You Order placed")
             console.log(result);
+            history.push('/home')
         })
 
     } 
@@ -64,7 +67,7 @@ const Order = () => {
                 <div className="card d-block bg-warning">
                 <form onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
-            <input className="my-2" placeholder="You name" defaultValue={user.displayName} {...register("name")} />
+            <input className="my-2" placeholder="You name" defaultValue={user?.displayName} {...register("name")} />
 
             {/* include validation with required or other standard HTML validation rules */}
             <input className="my-2" placeholder="You email"  defaultValue={user.email} {...register("email", { required: true })} />

@@ -47,11 +47,11 @@ const PendingOrder = (props) => {
             <Card.Text>
                 {desc.slice(0,100)}...
             </Card.Text>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between ">
                 <div className="check-btn">
-                <button >{status}</button>
+                <button className="bg-yellow-400 text-white " >{status}</button>
             </div>
-            <div className="check-btn"><button
+            <div className="check-btn bg-red-600 text-white "><button
             onClick={()=>handleDelete(_id)}
             >Delete</button></div>
                 </div>
