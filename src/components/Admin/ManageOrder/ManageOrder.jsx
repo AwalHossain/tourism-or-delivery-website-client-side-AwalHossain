@@ -57,7 +57,8 @@ const ManageOrder= () => {
         })
         .then(res => res.json())
         .then(data => {
-          window.location.reload(false);
+          // window.location.reload(false);
+          setControl(!control)
           alert("your order approved")
         })
       )

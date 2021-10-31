@@ -25,22 +25,15 @@ const Login = () => {
     return (
         <div className="section my-5">
             <h2>Login With</h2>
-            <div onClick={handleSignInWithGoogle} className="d-flex cursor-pointer my-3 credent  align-center">
-                <div className="g-logo d-flex">
-                    <img className="g-img" src="https://media.wired.com/photos/5926ffe47034dc5f91bed4e8/master/pass/google-logo.jpg" alt="" />
-                    </div>
-                <div className=" login " >
-                    <p  >Continue with Google</p>
-                </div>
-
+            <h2> Login to Google from this page! </h2><br />
+            <div  className="d-flex   align-center">
+            <img onClick={handleSignInWithGoogle}  className="text-center mx-auto cursor-pointer" src="http://www.androidpolice.com/wp-content/themes/ap2/ap_resize/ap_resize.php?src=http%3A%2F%2Fwww.androidpolice.com%2Fwp-content%2Fuploads%2F2015%2F10%2Fnexus2cee_Search-Thumb-150x150.png&w=150&h=150&zc=3" alt=""/> 
             </div>
-            
-            <div>
-                <div>
-                    <p>Don't have an accout? <a href="/">Create an account</a></p>
-                </div>
+            <div class="well">
+            <div class="g-signin2" data-onsuccess="onSignIn" data-width="240" data-height="50" data-longtitle="true"></div> 
+            <br />
             </div>
-        </div>
+         </div>
     );
 };
 

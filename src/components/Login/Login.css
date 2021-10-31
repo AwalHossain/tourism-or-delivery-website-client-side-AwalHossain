@@ -1,4 +1,4 @@
-.section {
+/* .section {
   width: 800px;
   height: 300px;
   background-color: azure;
@@ -27,4 +27,25 @@
 .login {
   display: flex;
   margin-left: 75px;
+} */
+
+.g-signin2 {
+  margin-left: 300px;
+}
+
+.well {
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+a:link {
+  text-decoration: none;
+  font-family: Station Medium;
+  font-size: 24px;
+}
+
+h2 {
+  text-align: center;
+  font-family: Station Medium;
 }

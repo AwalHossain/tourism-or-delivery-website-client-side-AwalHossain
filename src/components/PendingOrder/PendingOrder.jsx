@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { trackPromise } from 'react-promise-tracker';
 import './PendingOrder.css'
 
 const PendingOrder = (props) => {
@@ -11,26 +12,28 @@ const PendingOrder = (props) => {
     const handleDelete =(id)=>{
         const confirm = window.confirm("Do You really want to delete the item?")
         if(confirm){
-            fetch(`https://polar-tor-84735.herokuapp.com/deletOrder/${id}`,{
-                method:'DELETE',
-                headers:{
-                    'content-type':'application/json'
-                }
-            })
-            .then(res=> res.json())
-            .then(data =>{
-                
-                // const filter = data.
-                if(data.deletedCount){
-                    window.location.reload(false);
-                    alert("Successfully deleted")
-                    console.log(data);
-                }
-                else{
-                    setControl(false)
-                }
-
-            })
+            trackPromise(
+                fetch(`https://polar-tor-84735.herokuapp.com/deletOrder/${id}`,{
+                    method:'DELETE',
+                    headers:{
+                        'content-type':'application/json'
+                    }
+                })
+                .then(res=> res.json())
+                .then(data =>{
+                    
+                    // const filter = data.
+                    if(data.deletedCount){
+                        window.location.reload(false);
+                        alert("Successfully deleted")
+                        console.log(data);
+                    }
+                    else{
+                        setControl(false)
+                    }
+    
+                })
+            )
         }
     
 
@@ -49,7 +52,10 @@ const PendingOrder = (props) => {
             </Card.Text>
                 <div className="d-flex justify-content-between ">
                 <div className="check-btn">
-                <button className="bg-yellow-400 text-white " >{status}</button>
+                    {
+                        status === 'approved'?<button className="bg-green-400 text-white " >{status}</button> : <button className="bg-yellow-400 text-white " >{status}</button>
+                    }
+                
             </div>
             <div className="check-btn bg-red-600 text-white "><button
             onClick={()=>handleDelete(_id)}
