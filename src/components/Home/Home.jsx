@@ -5,6 +5,7 @@ import MidddleSection  from '../MiddleSection/MiddleSection'
 import Services from '../Services/Services';
 import Carousel from '../Carousel/Carousel'
 import Testimonial from '../Testimonial/Testimonial';
+import Contact from '../Contact/Contact';
 const Home = () => {
     return (
         <div>
@@ -15,6 +16,7 @@ const Home = () => {
             <LargeCard></LargeCard>
             <Carousel></Carousel>
             <Testimonial></Testimonial>
+            <Contact></Contact>
         </div>
     );
 };
