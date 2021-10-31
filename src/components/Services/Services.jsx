@@ -19,14 +19,12 @@ const Services = () => {
                 Our services
             </h2>
             <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* <Row xs={1} md={2} lg={3} className="g-4"> */}
                 {
                     services.map(data => <Service
                     key={data._id}
                     service={data}
                     ></Service>)
                 }
-            {/* </Row> */}
         </div>
         </div>
     );

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Banner.css'
+import { Link } from 'react-router-dom';
 const Banner = () => {
+    // Here i use an airbnb image for banner
     return (
         <div  className=" banner-imgbox relative  h-[300px] sm:h-[400px] log:h-[500px] xl:h-[600px] 2xl:h-[700px]">
             <div>
@@ -9,7 +11,7 @@ const Banner = () => {
             <div className="absolute top-1/2 w-full text-center sm:text-lg">
                 <p>Not sure Where to go?Perfect</p>
                 
-                <button className="text-purple-500 bg-white mx-auto px-10 py-3 shadow-md rounded-full font-bold my-3 border-none hover:shadow-xl transition duration-150">I'm Flexible</button>
+                <Link to="/services"> <button className="text-purple-500 bg-white mx-auto px-10 py-3 shadow-md rounded-full font-bold my-3 border-none hover:shadow-xl transition duration-150">I'm Flexible</button></Link>
             </div>
         </div>
     );

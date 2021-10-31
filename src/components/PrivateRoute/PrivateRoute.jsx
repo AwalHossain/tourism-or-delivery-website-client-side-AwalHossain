@@ -8,6 +8,7 @@ const PrivateRoute = ({children, ...rest}) => {
     if(loading){
         return <div className="text-center mx-auto my-5"><Spinner animation="border" variant="primary" /></div>
     }
+    // This is a private route
     return (
         <Route
         {...rest}

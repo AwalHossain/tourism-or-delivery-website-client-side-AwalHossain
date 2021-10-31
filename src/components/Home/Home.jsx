@@ -4,13 +4,14 @@ import LargeCard from '../LargeCard/LargeCard';
 import MidddleSection  from '../MiddleSection/MiddleSection'
 import Services from '../Services/Services';
 import Carousel from '../Carousel/Carousel'
-import Footer from '../Footer/Footer';
 const Home = () => {
     return (
         <div>
+            {/* This is home section where all element stack together */}
             <Banner></Banner>
-            <Services></Services>
             <MidddleSection></MidddleSection>
+            <Services></Services>
+            <LargeCard></LargeCard>
             <Carousel></Carousel>
         </div>
     );

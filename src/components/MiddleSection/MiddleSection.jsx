@@ -16,7 +16,7 @@ const MiddleSection = () => {
 
     },[])
     return (
-        //MiddleSection
+        //MiddleSection. beautiful Small card 
         <main className="max-w-7xl mx-auto px-8 sm:px-16">
           <div className="pt-6">
             <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
@@ -33,7 +33,6 @@ const MiddleSection = () => {
          }
         </div>
         <section>
-        <LargeCard></LargeCard>
         </section>
         </main>
     );

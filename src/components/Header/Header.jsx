@@ -6,6 +6,7 @@ import './Header.css'
 const Header = () => {
     const {user, logOut} = UseAuth()
     return (
+        // This is a react bootstarp navbar. Here i use some ternary operator
         <div className="">
             <Navbar collapseOnSelect expand="lg"  className="navigation bg-gray-800 " >
                 <Container>
@@ -26,8 +27,8 @@ const Header = () => {
                 </Nav>
                     {
                         user?.email &&   <NavDropdown className="text-white" title="Admin" id="collasible-nav-dropdown">
-                        <Link className="nav-link " to="addService">Add New Service</Link>
-                        <Link className="nav-link" to="/manageOrder" >Manage Order</Link>
+                        <Link className="nav-link " to="addService">Add Service</Link>
+                        <Link className="nav-link" to="/manageOrder" >Manage </Link>
                         </NavDropdown>
                     }
                 </Navbar.Collapse>

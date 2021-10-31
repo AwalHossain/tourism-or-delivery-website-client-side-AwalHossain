@@ -31,7 +31,7 @@ const UseFirebase = () => {
   return  signInWithPopup(auth, googleProvider)
       .finally(()=> setLoading(false))
     }
-
+    // logout 
     const logOut = ()=>{
         signOut(auth)
         .then(()=>{

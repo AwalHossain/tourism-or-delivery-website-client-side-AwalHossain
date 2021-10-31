@@ -21,8 +21,6 @@ const PendingOrder = (props) => {
                 })
                 .then(res=> res.json())
                 .then(data =>{
-                    
-                    // const filter = data.
                     if(data.deletedCount){
                         window.location.reload(false);
                         alert("Successfully deleted")
@@ -31,12 +29,9 @@ const PendingOrder = (props) => {
                     else{
                         setControl(false)
                     }
-    
                 })
             )
         }
-    
-
     }
 
     return (
@@ -56,11 +51,10 @@ const PendingOrder = (props) => {
                         status === 'approved'?<button className="bg-green-400 text-white " >{status}</button> : <button className="bg-yellow-400 text-white " >{status}</button>
                     }
                 
-            </div>
-            <button  className="check-btn bg-red-600 text-white "
-            onClick={()=>handleDelete(_id)}
-            >Delete</button></div>
-      
+                </div>
+                 <button  className="check-btn bg-red-600 text-white "
+                  onClick={()=>handleDelete(_id)}
+                 >Delete</button></div>
             </Card.Body>
         </Card>
      </Col>

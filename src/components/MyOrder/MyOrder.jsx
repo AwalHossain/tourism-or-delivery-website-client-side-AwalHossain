@@ -17,6 +17,7 @@ const MyOrder = () => {
     },[user?.email])
     console.log(list);
     return (
+        // Here you can all your order individully
         <div className="container">
             <Row xs={1} md={2} lg={3} className="g-4">
             {

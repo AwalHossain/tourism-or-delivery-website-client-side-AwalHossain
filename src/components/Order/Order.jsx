@@ -55,6 +55,7 @@ const Order = () => {
 
     } 
     return (
+        // Order section
         <div className=" my-5 container">
             <div className="row row-cols-1 row-cols-md-2">
                 <div className="col">
@@ -70,7 +71,7 @@ const Order = () => {
                 </div>
                 <div>
                 <div className="col">
-                <div className="card d-block bg-warning">
+                <div className="card d-block bg-warning mb-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
             <input className="my-2" placeholder="You name" defaultValue={user?.displayName} {...register("name")} />

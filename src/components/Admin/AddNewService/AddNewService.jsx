@@ -3,13 +3,11 @@ import { useForm } from 'react-hook-form';
 import { trackPromise } from 'react-promise-tracker';
 
 const AddNewService = () => {
+  //Reach hooks form used here
     const { register, handleSubmit,reset,
         formState: { errors } } = useForm();
     const [data, setData ] = useState([])
-
-
-   
-
+  
     const onSubmit = data =>{
         // data.status='pending'
         trackPromise(
@@ -29,7 +27,7 @@ const AddNewService = () => {
     } 
     return (
         <div className="bg-gray-200 h-screen">
-            <h2 className="text-4xl pt-5 pb-3">Add New Services</h2>
+            <h2 className="text-4xl pt-5 pb-3 px-2">Add New Services</h2>
          <form onSubmit={handleSubmit(onSubmit)}>
       {/* register your input into the hook by invoking the "register" function */}
       <input className="my-2" placeholder="Service Name"  {...register("name")} />
