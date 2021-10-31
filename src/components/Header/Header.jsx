@@ -10,7 +10,7 @@ const Header = () => {
         <div className="">
             <Navbar collapseOnSelect expand="lg"  className="navigation bg-gray-800 " >
                 <Container>
-                <Navbar.Brand href="#home"><img className="h-16 w-22" src="https://roam.qodeinteractive.com/wp-content/uploads/2017/08/h7-banner-h-img-7.png" alt="" /></Navbar.Brand>
+                <Navbar.Brand ><Link to="/home"><img className="h-16 w-22" src="https://roam.qodeinteractive.com/wp-content/uploads/2017/08/h7-banner-h-img-7.png" alt="" /></Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ms-auto">

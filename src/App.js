@@ -13,6 +13,7 @@ import MyOrder from './components/MyOrder/MyOrder';
 import AddNewService from './components/Admin/AddNewService/AddNewService';
 import ManageOrder from './components/Admin/ManageOrder/ManageOrder';
 import Footer from './components/Footer/Footer';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
         </PrivateRoute>
         <Route path="/login">
         <Login></Login>
+        </Route>
+        <Route to="*">
+          <NotFound></NotFound>
         </Route>
        </Switch>
         </div>

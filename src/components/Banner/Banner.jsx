@@ -11,7 +11,7 @@ const Banner = () => {
             <div className="absolute top-1/2 w-full text-center sm:text-lg">
                 <p>Not sure Where to go?Perfect</p>
                 
-                <Link to="/services"> <button className="text-purple-500 bg-white mx-auto px-10 py-3 shadow-md rounded-full font-bold my-3 border-none hover:shadow-xl transition duration-150">I'm Flexible</button></Link>
+                <Link to="/services"> <p className="text-purple-500 w-52 bg-white mx-auto px-10 py-3 shadow-md rounded-full font-bold my-3 border-none hover:shadow-xl transition duration-150">I'm Flexible</p></Link>
             </div>
         </div>
     );
