@@ -56,22 +56,22 @@ const Order = () => {
     } 
     return (
         // Order section
-        <div className=" my-5 container">
+        <div className=" my-5 container ">
             <div className="row row-cols-1 row-cols-md-2">
                 <div className="col">
                 <div className="card">
                     <div className="">
                         <img className="card-img-top card-img " src={img} alt="" />
                     </div>
-                    <div>
-                        <h5 className="text-black text-2xl">{name}</h5>
+                    <div className="space-x-4">
+                        <h5 className="text-black text-2xl px-2">{name}</h5>
                         <p>{desc}</p>
                     </div>
                 </div>
                 </div>
                 <div>
                 <div className="col">
-                <div className="card d-block bg-warning mb-5">
+                <div className="card d-block bg-warning mt-12">
                 <form onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
             <input className="my-2" placeholder="You name" defaultValue={user?.displayName} {...register("name")} />
