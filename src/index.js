@@ -14,14 +14,14 @@ import Loader from 'react-loader-spinner';
        <div
             style={{
               position: "fixed", /* or absolute */
-              top: "50%",
+              top: "35%",
               left: "50%",
-               display: "flex",
-               justifyContent: "center",
-              alignItems: "center"
+              //  display: "flex",
+              //  justifyContent: "center",
+              // alignItems: "center"
              }}
           >
-             <Loader type="ThreeDots" color="#2BAD60" height="100" width="100" />
+             <Loader type="ThreeDots" color="#2BAD60" width="100" />
            </div>
        
     )

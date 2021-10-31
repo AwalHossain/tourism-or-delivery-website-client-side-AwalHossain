@@ -12,7 +12,6 @@ const Home = () => {
             <Services></Services>
             <MidddleSection></MidddleSection>
             <Carousel></Carousel>
-            <Footer></Footer>
         </div>
     );
 };

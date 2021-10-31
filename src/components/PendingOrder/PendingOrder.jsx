@@ -57,10 +57,10 @@ const PendingOrder = (props) => {
                     }
                 
             </div>
-            <div className="check-btn bg-red-600 text-white "><button
+            <button  className="check-btn bg-red-600 text-white "
             onClick={()=>handleDelete(_id)}
             >Delete</button></div>
-                </div>
+      
             </Card.Body>
         </Card>
      </Col>

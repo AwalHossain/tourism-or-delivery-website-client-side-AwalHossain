@@ -16,14 +16,14 @@ const Service = (props) => {
             <div className="flex justify-end">
                 <HeartIcon className="h-7 cursor-pointer"></HeartIcon>
             </div>
-            <h5 className="text-black">{name}</h5>
+            <h5 className="text-black text-2xl">{name}</h5>
             <div className="border-b w-10 pt-2"></div>
             <p className="pt-2 text-sm text-gray-500 flex-grow">{desc.slice(0,100)}...</p>
             <div className="flex items-center  justify-between ">
             <div >
                 <p>
                 <Link className="no-underline" to={`order/${_id}`}>
-                     <button className="bg-green-400 text-white  rounded-lg border-none ">Check Avaibility</button>
+                     <button className="bg-green-400 text-white text-xs md:text-xl rounded-lg border-none ">Check Avaibility</button>
                     </Link>
                 </p>
             </div>
