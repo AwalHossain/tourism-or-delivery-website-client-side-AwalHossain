@@ -2,11 +2,14 @@ import React from 'react';
 
 const Testimonial = () => {
     return (
+        // User Testimonial
          <div>
              <div class="container mx-auto px-4 flex flex-col lg:items-center justify-between lg:flex-col">
                     <div class="mb-14 xl:mb-0">
                         <h1 class="text-2xl leading-tight md:text-4xl xl:text-5xl font-bold text-gray-800 md:w-full  pr-16 lg:pr-0">Our customers love what we do</h1>
-                        <p class="mt-4 text-base leading-normal text-gray-600 md:w-2/3 lg:w-3/4 pr-16 lg:pr-0">Over 500 companies use our product to understand their business and marketing better.</p>
+                        <p class="mt-4 text-base leading-normal text-gray-600 md:w-2/3 lg:w-full pr-16 lg:pr-0">Over 500 companies use our product to understand their business and marketing better. <br />
+                        Once you’ve found what you’re looking for, learn about your host, read past guest reviews, and get the details on cancellation options—then book in just a few clicks.
+                        </p>
                         <button class="w-full sm:w-auto mt-8 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 flex items-start justify-center sm:justify-start px-8 py-4 bg-indigo-700 hover:bg-gray-600 rounded text-base font-medium leading-none text-center text-white">Read success stories</button>
                     </div>
 

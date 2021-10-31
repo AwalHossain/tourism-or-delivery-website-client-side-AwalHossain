@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
     return (
+        // if the url not found the exact page 404 will show this components
         <div>
             <img className="h-96 w-full" src="https://i.stack.imgur.com/6M513.png" alt="" />
             <div className="text-center mx-auto">

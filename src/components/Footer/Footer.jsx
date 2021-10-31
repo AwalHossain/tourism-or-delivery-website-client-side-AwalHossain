@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             {/* A typical footer */}
-            <div className="grid grid-cols-1 md:grid-cols-4 flex-grow px-28 bg-gray-100 py-14 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-4 flex-grow px-28 bg-gray-100 py-14 gap-3 zendex">
                 <div className="text-xs text-gray-800">
                     <h5 className="text-lg text-black" >About</h5>
                     <p >How Dream Place works?</p>

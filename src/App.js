@@ -14,6 +14,8 @@ import AddNewService from './components/Admin/AddNewService/AddNewService';
 import ManageOrder from './components/Admin/ManageOrder/ManageOrder';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
+import Testimonial from './components/Testimonial/Testimonial';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -47,6 +49,12 @@ function App() {
         </PrivateRoute>
         <Route path="/login">
         <Login></Login>
+        </Route>
+        <Route path="/about">
+        <Testimonial></Testimonial>
+        </Route>
+        <Route path="/contact">
+        <Contact></Contact>
         </Route>
         <Route to="*">
           <NotFound></NotFound>

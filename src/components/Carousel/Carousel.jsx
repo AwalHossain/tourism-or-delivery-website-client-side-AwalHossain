@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 SwiperCore.use([Pagination]);
 const Carousel = () => {
     return (
-        // This is a travel image gallary carousel
+        // This is a travel image gallary carousel using swiperjs
         <div className="hidden lg:block my-10">
             <h2 className="text-4xl mb-16 font-bold">Travel Gallary</h2>
              <>

@@ -8,10 +8,10 @@ const Service = (props) => {
     const {name, desc, price, image,_id}  = props.service
     return (
         //Service card. all the service you can see in UI are going from here
-        <div className=" flex items-center flex-col sm:flex-row  md:flex-col px-2 shadow-xl transition duration-200 ease-out mb-5 rounded-lg">
+        <div className=" flex items-center flex-col  md:shadow-none shadow-xl md:flex-col px-2 hover:shadow-2xl  transition duration-200 ease-out mb-5 rounded-lg">
             <div className=" card-imgbox relative  md:h-64  md:w-full flex-shrink-0 px-4">
                 <img src={image} className="md:h-64 " alt="" />
-             </div>
+            </div>
             <div className="flex flex-col flex-grow-pl-5">
                 <div className="flex  justify-end ">
                     <HeartIcon className="h-7 cursor-pointer"></HeartIcon>

@@ -27,11 +27,13 @@ const Order = () => {
     const desc = filterData[0]?.desc;
     const img = filterData[0]?.image;
     const name = filterData[0]?.name;
+    const price = filterData[0]?.price;
     console.log( name);
 
     const onSubmit = data =>{
         data.status='pending'
         data.displayName=user?.displayName
+        data.email = user?.email
         data.name = name;
         data.img = img
         data.desc = desc
@@ -66,6 +68,7 @@ const Order = () => {
                     <div className="space-x-4">
                         <h5 className="text-black text-2xl px-2">{name}</h5>
                         <p>{desc}</p>
+                        <p className="text-3xl font-bold">${price}/night</p>
                     </div>
                 </div>
                 </div>
@@ -74,10 +77,10 @@ const Order = () => {
                 <div className="card d-block bg-warning mt-12">
                 <form onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
-            <input className="my-2" placeholder="You name" defaultValue={user?.displayName} {...register("name")} />
+            <input className="my-2" placeholder="You name" defaultValue={user?.displayName} {...register("username",{ required: true })} />
 
             {/* include validation with required or other standard HTML validation rules */}
-            <input className="my-2" placeholder="You email"  value={user.email} {...register("email", { required: true })} />
+            <input className="my-2" placeholder="You email"  value={user.email} {...register("mail", { required: true })} />
             {/* errors will return when field validation fails  */}
             {errors.email && <p>This field is required</p>}
             <input className="my-2" placeholder="You address"  {...register("address")} />

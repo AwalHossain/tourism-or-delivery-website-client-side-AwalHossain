@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => {
     return (
         // This is a contact us form
-    <div>
+    <div className="px-4">
          <div className="pt-6 px-4">
             <h2 className="text-4xl font-semibold pb-5">Contact with us Anytime</h2>
          </div>

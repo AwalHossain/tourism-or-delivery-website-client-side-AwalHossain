@@ -65,12 +65,12 @@ const ManageOrder= () => {
     }
     //if device width less than 668 than you cannot see this components
     if(window.outerWidth < 668){
-      return <h1 className="px-4 flex py-4">Please, use larger screen to show manage order and if you do Please refresh the page</h1>
+      return <h1 className="px-4 text-3xl flex py-4">Please, use larger screen to show manage order and if you do Please refresh the page</h1>
     }
 
     return (
         <div>
-          {/* Mange order table */}
+          {/* Mange order table or Admin section */}
        <Table striped bordered hover>
         <thead>
           <tr>
@@ -90,7 +90,7 @@ const ManageOrder= () => {
             <tr>
               <td>{index}</td>
               <td>{pd.name}</td>
-              <td>{pd?.displayName}</td>
+              <td>{pd?.username}</td>
               <td>{pd.email}</td>
               <td>
                 <div >

@@ -8,7 +8,7 @@ const PendingOrder = (props) => {
     //useState 
     const [control, setControl] = useState(false)
     console.log(props.order);
-    //handle Delete
+    //handle Delete method delete
     const handleDelete =(id)=>{
         const confirm = window.confirm("Do You really want to delete the item?")
         if(confirm){
@@ -35,6 +35,7 @@ const PendingOrder = (props) => {
     }
 
     return (
+        // This is myOrder section
         <Col className="my-5">
         <Card className="box">
             <div className="img-box">

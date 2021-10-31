@@ -21,7 +21,7 @@ const MyOrder = () => {
         <div className="container">
             <Row xs={1} md={2} lg={3} className="g-4">
             {
-              list?.length !== 0 ?  list.map(info => <PendingOrder key={info._id} order={info}></PendingOrder>) : <h2 className="text-center mx-auto py-16">No order avialable</h2>
+              list?.length !== 0 ?  list.map(info => <PendingOrder key={info._id} order={info}></PendingOrder>) : <h2 className="text-center text-2xl mx-auto py-16">No order avialable</h2>
             }
             </Row>
 

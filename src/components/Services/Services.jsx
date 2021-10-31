@@ -14,6 +14,7 @@ const Services = () => {
     },[])
     
     return (
+        //Fetching data and then map the data to get every single one of them
         <div>
             <div className="pt-6">
             <h2 className="text-4xl font-semibold pb-5"> Our Services</h2>
