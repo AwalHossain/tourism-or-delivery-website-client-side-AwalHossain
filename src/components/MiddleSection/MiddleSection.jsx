@@ -9,7 +9,7 @@ const MiddleSection = () => {
     useEffect(()=>{
 
             trackPromise (
-                fetch('https://awalhossain.github.io/jsonkeeper/keeper.json')
+                fetch('https://polar-tor-84735.herokuapp.com/nearby')
                 .then(res=> res.json())
                 .then(result => setData(result))
             )

@@ -4,6 +4,7 @@ import LargeCard from '../LargeCard/LargeCard';
 import MidddleSection  from '../MiddleSection/MiddleSection'
 import Services from '../Services/Services';
 import Carousel from '../Carousel/Carousel'
+import Testimonial from '../Testimonial/Testimonial';
 const Home = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const Home = () => {
             <Services></Services>
             <LargeCard></LargeCard>
             <Carousel></Carousel>
+            <Testimonial></Testimonial>
         </div>
     );
 };
