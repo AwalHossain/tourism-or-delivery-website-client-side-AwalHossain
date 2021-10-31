@@ -18,7 +18,8 @@ import { Link } from 'react-router-dom';
 SwiperCore.use([Pagination]);
 const Carousel = () => {
     return (
-        <div className="hidden lg:block">
+        <div className="hidden lg:block my-10">
+            <h2 className="text-4xl mb-16 font-bold">Travel Gallary</h2>
              <>
       <Swiper
         slidesPerView={3}
@@ -31,14 +32,9 @@ const Carousel = () => {
             <div className="imgbox">
             <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/tour-4-featured-img.jpg" alt="img"/>
             </div>
-            <div className="content">
-                <h5 className="title">China Tour</h5>
-                <p className="para">Get the latest on adoption processes, learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
-
-                <Link to="/services">
-                <button className="btn btn-primary my-3">Added
-                </button>
-                </Link>
+            <div className="content mx-auto text-center">
+                <h5 className="title text-4xl font-extrabold">Visit Japan</h5>
+                <p className="para"> learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
             </div>
             </div>
             </div>
@@ -50,14 +46,10 @@ const Carousel = () => {
             <div className="imgbox">
             <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/02/tour-20-featured-img.jpg" alt="" />
             </div>
-            <div className="content">
-                <h5 className="title">China Tour</h5>
-                <p className="para">Get the latest on adoption processes, learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
+            <div className="content text-center">
+                <h5 className="title text-4xl font-extrabold">Vietnam Tour</h5>
+                <p className="para"> learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
 
-                <Link to="/services">
-                <button className="btn btn-primary my-3">Added
-                </button>
-                </Link>
             </div>
             </div>
             </div>
@@ -69,14 +61,9 @@ const Carousel = () => {
             <div className="imgbox">
             <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/tour-17-featured-img.jpg" alt="" />
             </div>
-            <div className="content">
-                <h5 className="title">China Tour</h5>
-                <p className="para">Get the latest on adoption processes, learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
-
-                <Link to="/services">
-                <button className="btn btn-primary my-3">Added
-                </button>
-                </Link>
+            <div className="content text-center">
+                <h5 className="title text-4xl font-extrabold">Great Africa Tour</h5>
+                <p className="para "> learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
             </div>
             </div>
             </div>
@@ -88,14 +75,10 @@ const Carousel = () => {
             <div className="imgbox">
             <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/tour-18-featured-img.jpg" alt="" />
             </div>
-            <div className="content">
-                <h5 className="title">China Tour</h5>
-                <p className="para">Get the latest on adoption processes, learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
+            <div className="content text-center">
+                <h5 className="title text-4xl font-extrabold">Cold Alaska Tour</h5>
+                <p className="para"> learn how local shelters and rescue groups are adapting and find out what you can do to help dogs and cats in need right now..</p>
 
-                <Link to="/services">
-                <button className="btn btn-primary my-3">Added
-                </button>
-                </Link>
             </div>
             </div>
             </div>
