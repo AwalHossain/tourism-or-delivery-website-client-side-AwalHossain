@@ -5,15 +5,13 @@ Our website link: https://your-dream-place.web.app/
 
 ## Why you will choose us
 
-1.Health and safety is a priority \
-2.More cancellation options \
-3.Support anytime, day or night\
-4. We offer you great deal that no one does \
-5. Customers are our main focus. You can check our customer satisfactory list\
-6. You can undo your order within 24hours\
-7. Every year a specific time you give 50 customer a free travel pass with their desire place\
-8. We got best travel agency award last year\
-9. we can offer you to visit any place in this earth
+1.People can visit their dream place by using this website where they can book any places any time anywhere \
+2.Users can add and delete their order before the specific time \
+3.It’s a MERN stack Project\
+4.Registration & Login system secured by Firebase \
+5.MongoDB is as database\
+6. CRUD system implemented\
+
 
 ### What is this website for
 
